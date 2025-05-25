@@ -17,20 +17,12 @@ WellnessBot is an AI-powered chatbot that provides personalized wellness advice,
 ## Requirements
 
 - Python 3.13+
-- Required packages (see `requirements.txt`):
+- Required packages (see `pyproject.toml`):
   - requests
   - streamlit
   - python-dotenv
 
 ## Usage
-
-To run the WellnessBot:
-
-```bash
-streamlit run app.py
-```
-
-This will start a local web server and open your browser to the WellnessBot web interface. You can then interact with the bot through the chat interface in your web browser.
 
 ### Fork and Customize
 
@@ -44,10 +36,17 @@ cd WellnessBot
 Install the required dependencies:
 
 ```bash
-pip install -r requirements.txt
+uv pip install .
+```
+You can then run the bot or modify the code to suit your needs.
+
+To run the WellnessBot:
+
+```bash
+streamlit run app.py
 ```
 
-You can then run the bot or modify the code to suit your needs.
+This will start a local web server and open your browser to the WellnessBot web interface. You can then interact with the bot through the chat interface in your web browser.
 
 ## Technical Details
 
