@@ -56,10 +56,6 @@ WellnessBot uses NVIDIA's API to connect with the Mistral Medium 3 language mode
 
 You can modify the prompt template in `prompt_template.py` to adjust the bot's personality and response style.
 
-## License
-
-This project is for personal use only. API keys should not be shared.
-
 ## Disclaimer
 
 WellnessBot provides general wellness information and should not be considered a substitute for professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare providers for medical concerns.
