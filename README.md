@@ -2,14 +2,17 @@
 
 WellnessBot is an AI-powered chatbot that provides personalized wellness advice, including information on physical health, mental well-being, nutrition, fitness, and lifestyle choices.
 
+## Demo
+
+[<video controls src="Demo.mp4" title="Title"></video>](https://github.com/user-attachments/assets/fd4108ca-9143-4ab3-8c23-7e5573c212c1)
+
 ## Features
 
-- Interactive command-line and web interfaces
+- Modern, user-friendly web interface (Streamlit)
 - Personalized wellness recommendations
 - Evidence-based health information
 - Conversation memory to maintain context
-- Streaming responses for a more natural conversation flow (CLI version)
-- Modern, user-friendly web interface (Streamlit version)
+- Interactive chat experience
 
 ## Requirements
 
@@ -21,9 +24,7 @@ WellnessBot is an AI-powered chatbot that provides personalized wellness advice,
 
 ## Usage
 
-### Web Interface (Streamlit)
-
-To run the WellnessBot with the Streamlit web interface:
+To run the WellnessBot:
 
 ```bash
 streamlit run app.py
@@ -46,7 +47,7 @@ Install the required dependencies:
 pip install -r requirements.txt
 ```
 
-You can then run the bot using the Streamlit interface or modify the code to suit your needs.
+You can then run the bot or modify the code to suit your needs.
 
 ## Technical Details
 
