@@ -13,25 +13,13 @@ WellnessBot is an AI-powered chatbot that provides personalized wellness advice,
 
 ## Requirements
 
-- Python 3.6+
+- Python 3.13+
 - Required packages (see `requirements.txt`):
   - requests
   - streamlit
   - python-dotenv
 
 ## Usage
-
-### Command Line Interface
-
-To start the WellnessBot in command-line mode:
-
-```bash
-python main.py
-```
-
-Interact with the bot by typing your wellness-related questions when prompted. The bot will respond with helpful information and advice.
-
-Type `exit`, `quit`, or `bye` to end the conversation.
 
 ### Web Interface (Streamlit)
 
@@ -42,6 +30,23 @@ streamlit run app.py
 ```
 
 This will start a local web server and open your browser to the WellnessBot web interface. You can then interact with the bot through the chat interface in your web browser.
+
+### Fork and Customize
+
+To use or customize WellnessBot, fork this repository and clone it to your local machine:
+
+```bash
+git clone https://github.com/Pratham-gupta-235/WellnessBot.git
+cd WellnessBot
+```
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+You can then run the bot using the Streamlit interface or modify the code to suit your needs.
 
 ## Technical Details
 
