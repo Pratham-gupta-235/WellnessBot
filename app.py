@@ -11,8 +11,11 @@ load_dotenv()
 class StreamlitWellnessBot:
     def __init__(self):
         self.invoke_url = "https://integrate.api.nvidia.com/v1/chat/completions"
+        api_key = os.getenv('NVIDIA_API_KEY')
+        if not api_key:
+            raise ValueError("NVIDIA_API_KEY environment variable not set.")
         self.headers = {
-            "Authorization": f"Bearer {os.getenv('NVIDIA_API_KEY', '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')}",
+            "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json"
         }
         
@@ -34,8 +37,11 @@ class StreamlitWellnessBot:
 
     def get_wellness_advice(self, user_input):
         messages = self.prepare_messages(user_input)
+        model_name = os.getenv('MODEL_NAME'),
+        if not model_name:
+            raise ValueError("MODEL_NAME environment variable not set.")
         payload = {
-            "model": os.getenv('MODEL_NAME', 'mistralai/mistral-medium-3-instruct'),
+            "model": model_name,
             "messages": messages,
             "max_tokens": int(os.getenv('MAX_TOKENS', 1024)),
             "temperature": float(os.getenv('TEMPERATURE', 0.7)),
@@ -105,27 +111,27 @@ def main():
     
     # Add description in sidebar
     with st.sidebar:
-        st.header("About WellnessBot")
-        st.write("""
-        WellnessBot is an AI-powered assistant that provides evidence-based information on:
-        - Physical health and fitness
-        - Mental well-being
-        - Nutrition and diet
-        - Lifestyle choices
-        - Self-care practices
-        
+        st.title("About WellnessBot")
+        st.html("""
+        WellnessBot is an AI-powered assistant that provides evidence-based information on:<br>
+        🖋️ Physical health and fitness <br>
+        🧠 Mental well-being <br>
+        🥗 Nutrition and diet <br>
+        🏃 Lifestyle choices <br>
+        🧘 Self-care practices <br><br>
+
         The bot uses a large language model to provide personalized wellness advice.
         Please note that while the information is helpful, it should not replace professional medical advice.
         """)
     
     # Display chat interface
-    st.divider()
+    # st.divider()
     display_chat_history()
     handle_user_input()
     
     # Footer
     st.divider()
-    st.caption("WellnessBot is powered by NVIDIA API and Mistral AI. It provides general wellness information and should not be considered medical advice.")
+    # st.caption("WellnessBot is powered by NVIDIA API and Mistral AI. It provides general wellness information and should not be considered medical advice.")
 
 if __name__ == "__main__":
     main()
