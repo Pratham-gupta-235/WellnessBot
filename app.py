@@ -100,7 +100,7 @@ def handle_user_input():
         st.session_state.messages.append({"role": "assistant", "content": response})
 
 def main():
-    st.set_page_config(page_title="🌿 WellnessBot", page_icon="🌿", layout="centered")
+    st.set_page_config(page_title="WellnessBot 🌿", page_icon="🌿", layout="centered")
     
     # Initialize session state
     initialize_session_state()
